@@ -20,5 +20,27 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   // run the start function after the connection is made to prompt the user
+  console.log("connected as id " + connection.threadId);
   start();
 });
+
+// function which prompts the user for what action they should take
+function start() {
+  inquirer
+    .prompt([
+    {
+      name: "ID",
+      type: "input",
+      message: "What is the ID of the item you would like to buy?",
+    },
+    {
+      name: "Quantity",
+      type: "input",
+      message: "What amount of that item would you like?"  
+    }
+])
+    .then(function(answer) {
+      //Place holder
+    });
+}
+
