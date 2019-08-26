@@ -12,3 +12,25 @@ CREATE TABLE products(
   stock_quantity INT default 0,
   PRIMARY KEY (id)
 );
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("watch", "electronics", 75, 2);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("greenshirt", "clothing", 85, 5);
+
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("uglyshirt", "clothing", 1000, 1);
+
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("apple", "food", 1, 5);
+
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("computer", "electronics", 50, 2);
+
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("orange", "food", 10, 5);

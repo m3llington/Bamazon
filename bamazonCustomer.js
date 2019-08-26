@@ -29,7 +29,7 @@ function start() {
   inquirer
     .prompt([
     {
-      name: "ID",
+      name: "Name",
       type: "input",
       message: "What is the ID of the item you would like to buy?",
     },
@@ -40,7 +40,21 @@ function start() {
     }
 ])
     .then(function(answer) {
-      //Place holder
+      //answers from the ID prompt
+      if (answer.ID === "apple") {
+        console.log("ID test is working");
+        connection.end();
+      }
+      //answers from the quantity prompt
+      else if (answer.Quantity === 1){
+        console.log("quantity test is working");
+        connection.end();
+      }
+      else{
+        console.log("test may be working");
+        connection.end();
+      }
     });
 }
 
+//for loop console log in order to show the items that the user can choose
