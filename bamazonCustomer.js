@@ -55,18 +55,42 @@ function start() {
         if (answer.ID === res[i].id){
           var orderID = answer.ID;
           var orderQuantity = answer.Quantity;
-          console.log("processing order");
+          console.log("Processing order...");
           purchaseOrder(orderID, orderQuantity);
           // connection.end();
         } 
       }
+    
+      function purchaseOrder(Id, Quantity){
+        var i = Id;
+         if (Quantity > res[i].stock_quantity) {
+           console.log("I'm sorry we do not have the amount you requested")
+           connection.end();
+         }
+         else{
+           console.log("Order has been succesful!")
+           console.log("You have chosen to purchase " + Quantity + " units of our famous " + res[i].product_name + " the total cost will be " + res[i].price  + "!")
+           connection.end();
+         }
+         
+       }
+    
+    
     });
 });
 
-function purchaseOrder(Id, Quantity){
- console.log(Id);
-  connection.end();
-}
+// function purchaseOrder(Id, Quantity){
+//  var i = Id;
+//   if (Quantity < res[i].stock_quantity) {
+//     console.log("Calm down you're asking for too much")
+//     connection.end();
+//   }
+//   else{
+//     console.log("PurchaseOrder succesful")
+//     connection.end();
+//   }
+  
+// }
 
 }
 
