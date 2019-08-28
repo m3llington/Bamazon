@@ -51,19 +51,11 @@ function start() {
     }
 ])
     .then(function(answer) {
-      //answers from the ID prompt
-      if (answer.ID === 1) {
-        console.log("ID test is working");
-        connection.end();
-      }
-      //answers from the quantity prompt
-      else if (answer.Quantity === 2){
-        console.log("Quantity test is working");
-        connection.end();
-      }
-      else{
-        console.log("test may be working");
-        connection.end();
+      for (var i = 0; i < res.length; i++){
+        if (answer.ID === res[i].id){
+          console.log("success");
+          connection.end();
+        } 
       }
     });
 });
