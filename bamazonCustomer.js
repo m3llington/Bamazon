@@ -31,7 +31,7 @@ function start() {
     if (err) throw err;
     // console.log((res));
     for (var i = 0; i < res.length; i++){
-      console.log("\nID: " + res[i].id + "\nProduct Name: " + res[i].product_name + "\nDepartment: " + res[i].department_name + "\nPrice: " + res[i].price + "\nQuantity in Stock: " + res[i].stock_quantity + "\n----------------");
+      console.log("\nID: " + res[i].id + "\nProduct: " + res[i].product_name + "\nDepartment: " + res[i].department_name + "\nPrice: " + res[i].price + "\nQuantity: " + res[i].stock_quantity + "\n----------------");
     
  }
   
@@ -42,6 +42,7 @@ function start() {
       type: "input",
       message: "What is the ID of the item you would like to buy?",
       filter: Number
+      //used in order to return only numbers from user selection
     },
     {
       name: "Quantity",
@@ -70,7 +71,7 @@ function start() {
          }
          else{
            console.log("Order has been succesful!")
-           console.log("You have chosen to purchase " + Quantity + " units of our famous " + res[i].product_name + " the total cost will be " + res[i].price  + "!")
+           console.log("You have chosen to purchase " + Quantity + " units of our famous " + res[i].product_name + " the cost will be " + res[i].price  + "!")
            connection.end();
          }
          
