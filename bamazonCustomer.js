@@ -53,12 +53,20 @@ function start() {
     .then(function(answer) {
       for (var i = 0; i < res.length; i++){
         if (answer.ID === res[i].id){
-          console.log("success");
-          connection.end();
+          var orderID = answer.ID;
+          var orderQuantity = answer.Quantity;
+          console.log("processing order");
+          purchaseOrder(orderID, orderQuantity);
+          // connection.end();
         } 
       }
     });
 });
+
+function purchaseOrder(Id, Quantity){
+ console.log(Id);
+  connection.end();
+}
 
 }
 
