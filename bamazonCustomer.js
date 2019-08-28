@@ -62,7 +62,8 @@ function start() {
       }
     
       function purchaseOrder(Id, Quantity){
-        var i = Id;
+        //to account for placement of index's in array
+        var i = Id - 1;
          if (Quantity > res[i].stock_quantity) {
            console.log("I'm sorry we do not have the amount you requested")
            connection.end();
@@ -79,19 +80,6 @@ function start() {
     });
 });
 
-// function purchaseOrder(Id, Quantity){
-//  var i = Id;
-//   if (Quantity < res[i].stock_quantity) {
-//     console.log("Calm down you're asking for too much")
-//     connection.end();
-//   }
-//   else{
-//     console.log("PurchaseOrder succesful")
-//     connection.end();
-//   }
-  
-// }
 
 }
 
-//for loop console log in order to show the items that the user can choose
