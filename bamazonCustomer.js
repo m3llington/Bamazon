@@ -70,8 +70,10 @@ function start() {
            connection.end();
          }
          else{
+          //  res[i].stock_quantity - Quantity
+          var totalCost = Quantity * res[i].price;
            console.log("Order has been succesful!")
-           console.log("You have chosen to purchase " + Quantity + " units of our famous " + res[i].product_name + " the cost will be " + res[i].price  + "!")
+           console.log("You have chosen to purchase " + Quantity + " units of our famous " + res[i].product_name + " the cost will be " + totalCost  + "!")
            connection.end();
          }
          
