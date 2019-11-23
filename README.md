@@ -4,4 +4,4 @@ For this activity we were tasked with using both node.js, and mySQL to create an
 
 Instructions: The user simply needs to run the bamazonCustomer.js with node, and then after that select the ID, and quantity of the item they wish to purchase. The app will let them know if their transaction is possible based on the avalibility of the item.
 
-Screnshots are availible 
+Screnshots are listed as bamazonscreenshot.png etc inside the file.
